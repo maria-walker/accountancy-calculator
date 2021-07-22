@@ -1,0 +1,70 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+h1 {
+  font-size: 3em;
+}
+.numbers {
+  display: grid;
+  color: red;
+  grid-template-columns: repeat(4, 0.25fr);
+  grid-auto-rows: 100px;
+}
+
+.number {
+  background: #7aca9a;
+  color: #055349;
+  box-shadow: 0 0 5px black;
+  font-size: 2em;
+  font-weight: 900;
+  padding: 10%;
+}
+
+.result {
+  background: #8f7aca;
+  color: blue;
+  box-shadow: 0 0 5px black;
+  font-size: 2em;
+  font-weight: 900;
+  padding: 10%;
+}
+
+.operators {
+  display: grid;
+  color: red;
+  grid-template-columns: repeat(4, 0.1875fr);
+  grid-auto-rows: 100px;
+}
+
+.operator {
+  background: rgb(199, 142, 199);
+  color: rgb(85, 9, 136);
+  box-shadow: 0 0 5px black;
+  font-size: 3em;
+  font-weight: 900;
+  padding: 10%;
+}
+.VAT {
+  background: rgb(221, 183, 134);
+  color: rgb(177, 102, 3);
+  box-shadow: 0 0 5px black;
+  font-size: 2em;
+  font-weight: 900;
+  padding: 10%;
+}
+
+button:hover {
+  transform: translateZ(2em);
+  opacity: 0.7;
+}
