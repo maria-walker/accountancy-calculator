@@ -69,19 +69,31 @@ const Input = () => {
         >
           AC
         </button>
-        <button className="operator">+/-</button>
-        <button
-          onClick={() => {
-            setMaths((currMaths) => {
-              let newMaths = currMaths;
-              newMaths += ".";
-              console.log(newMaths);
-              return newMaths;
-            });
-          }}
-          className="operator"
-        >
-          .
+        <button className="result">
+          {" "}
+          <p
+            style={{
+              fontSize: "0.5em",
+              textAlign: "left",
+              verticalAlign: "top",
+            }}
+          >
+            {" "}
+            this is where the maths exp will go{" "}
+          </p>{" "}
+        </button>
+        <button className="result">
+          <p
+            style={{
+              fontSize: "0.5em",
+              textAlign: "left",
+              verticalAlign: "top",
+            }}
+          >
+            {" "}
+            Result:{" "}
+          </p>{" "}
+          <Result userInput={userInput} />
         </button>
         <button
           onClick={() => {
@@ -252,19 +264,7 @@ const Input = () => {
         >
           /
         </button>
-        <button
-          onClick={() => {
-            setMaths((currMaths) => {
-              let newMaths = currMaths;
-              newMaths += 0;
-              console.log(newMaths);
-              return newMaths;
-            });
-          }}
-          className="number"
-        >
-          0
-        </button>
+
         <button
           onClick={() => {
             setMaths((currMaths) => {
@@ -278,9 +278,22 @@ const Input = () => {
         >
           .
         </button>
-        <button className="result">
-          <Result userInput={userInput} />
+
+        <button
+          onClick={() => {
+            setMaths((currMaths) => {
+              let newMaths = currMaths;
+              newMaths += 0;
+              console.log(newMaths);
+              return newMaths;
+            });
+          }}
+          className="number"
+        >
+          0
         </button>
+
+        <button className="operator">+/-</button>
         <button
           onClick={() => {
             setUserInput(maths);

@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  padding: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
@@ -23,6 +24,67 @@ h1 {
 }
 
 .number {
+  background: #907ad6;
+  color: #2c2a4a;
+  box-shadow: 0 0 5px black;
+  font-size: 2em;
+  font-weight: 900;
+  padding: 10%;
+}
+
+.result {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #bfc3ff;
+  color: #2c2a4a;
+  box-shadow: 0 0 5px black;
+  font-size: 2em;
+  font-weight: 900;
+  padding: 10%;
+}
+
+.operators {
+  display: grid;
+  color: red;
+  grid-template-columns: repeat(4, 0.1875fr);
+  grid-auto-rows: 100px;
+}
+
+.operator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #4f518c;
+  color: #2c2a4a;
+  box-shadow: 0 0 5px black;
+  font-size: 2.5em;
+  font-weight: 900;
+  padding: 10%;
+}
+.VAT {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #2c2a4a;
+  color: #bfc3ff;
+  box-shadow: 0 0 5px black;
+  font-size: 2em;
+  font-weight: 900;
+  padding: 10%;
+}
+
+button:hover {
+  transform: translateZ(2em);
+  opacity: 0.7;
+}
+
+.resultPara {
+  color: red;
+  margin-bottom: 60px;
+}
+
+/* .number {
   background: #7aca9a;
   color: #055349;
   box-shadow: 0 0 5px black;
@@ -38,16 +100,9 @@ h1 {
   font-size: 2em;
   font-weight: 900;
   padding: 10%;
-}
+} */
 
-.operators {
-  display: grid;
-  color: red;
-  grid-template-columns: repeat(4, 0.1875fr);
-  grid-auto-rows: 100px;
-}
-
-.operator {
+/* .operator {
   background: rgb(199, 142, 199);
   color: rgb(85, 9, 136);
   box-shadow: 0 0 5px black;
@@ -62,9 +117,4 @@ h1 {
   font-size: 2em;
   font-weight: 900;
   padding: 10%;
-}
-
-button:hover {
-  transform: translateZ(2em);
-  opacity: 0.7;
-}
+} */

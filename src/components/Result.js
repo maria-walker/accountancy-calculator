@@ -9,7 +9,7 @@ const Result = ({ userInput }) => {
 
   return Number.isNaN(result) ? (
     <div>
-      <p>Please enter a maths expression </p>
+      <p className="resultPara"> Please enter a maths expression </p>
     </div>
   ) : (
     <div>
