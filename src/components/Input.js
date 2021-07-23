@@ -5,8 +5,39 @@ import { useState } from "react";
 const Input = () => {
   const [userInput, setUserInput] = useState("");
   const [maths, setMaths] = useState("");
+  const [VAT, setVAT] = useState(0.2);
   return (
     <div>
+      <section>
+        <details>
+          <summary>Instructions</summary>
+          <ol>
+            <li>Select the required VAT rate from the drop-down list</li>
+            <li>
+              For VAT calculations, enter the amount and click on the required
+              VAT operation, then click = .{" "}
+            </li>
+            <li>
+              For standard maths operations, enter maths expression, then click
+              = .{" "}
+            </li>
+            <li></li>
+          </ol>
+        </details>
+        <select
+          defaultValue="Select VAT rate"
+          onChange={(event) => setVAT(event.currentTarget.value)}
+        >
+          <option>20% - Standard Rate</option>
+          <option>5% - Reduced Rate </option>
+          <option>
+            12.5% - Reduced Rate for hospitality supplies, in effect from 1 Oct
+            2021.
+          </option>
+          <option>Select VAT rate</option>
+        </select>
+      </section>
+
       <section className="numbers">
         <button
           onClick={() => {
