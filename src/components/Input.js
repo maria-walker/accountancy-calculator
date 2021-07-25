@@ -5,45 +5,56 @@ import { useState } from "react";
 const Input = () => {
   const [userInput, setUserInput] = useState("");
   const [maths, setMaths] = useState("");
-  const [VAT, setVAT] = useState(0.2);
+  const [VAT, setVAT] = useState("0.20");
   return (
-    <div>
-      <section>
-        <details>
+    <div style={{ maxWidth: "1200px", margin: "auto" }}>
+      <section className="instructions">
+        <details style={{ textAlign: "left" }}>
           <summary>Instructions</summary>
           <ol>
-            <li>Select the required VAT rate from the drop-down list</li>
+            <li>
+              Select required VAT rate from the drop-down list. If no VAT rate
+              is selected, 20% will be used by default
+            </li>
             <li>
               For VAT calculations, enter the amount and click on the required
-              VAT operation, then click = .{" "}
+              VAT operation, then click ={" "}
             </li>
             <li>
               For standard maths operations, enter maths expression, then click
-              = .{" "}
+              ={" "}
             </li>
-            <li></li>
+            <li>
+              Click AC after each completed operation, or when entered an amount
+              or a symbol by mistake{" "}
+            </li>
+            <li>
+              Result is rounded to 2 decimals, ready to be entered into
+              accounting system
+            </li>
           </ol>
         </details>
         <select
+          style={{ color: "#bfc3ff" }}
           defaultValue="Select VAT rate"
           onChange={(event) => setVAT(event.currentTarget.value)}
         >
-          <option>20% - Standard Rate</option>
-          <option>5% - Reduced Rate </option>
-          <option>
-            12.5% - Reduced Rate for hospitality supplies, in effect from 1 Oct
-            2021.
-          </option>
           <option>Select VAT rate</option>
+          <option value="0.20">20% - Standard Rate</option>
+          <option value="0.05">5% - Reduced Rate </option>
+          <option value="0.125">
+            12.5% - Reduced Rate for hospitality, effective from 1 Oct 21
+          </option>
         </select>
       </section>
 
+      <br />
       <section className="numbers">
         <button
           onClick={() => {
             setMaths((currMaths) => {
               let newMaths = currMaths;
-              newMaths += "*0.2";
+              newMaths += `*${VAT}`;
               console.log(newMaths);
               return newMaths;
             });
@@ -57,7 +68,7 @@ const Input = () => {
           onClick={() => {
             setMaths((currMaths) => {
               let newMaths = currMaths;
-              newMaths += "*1.2";
+              newMaths += `*(1+${VAT})`;
               console.log(newMaths);
               return newMaths;
             });
@@ -69,7 +80,7 @@ const Input = () => {
           onClick={() => {
             setMaths((currMaths) => {
               let newMaths = currMaths;
-              newMaths += "/1.2";
+              newMaths += `/(1+${VAT})`;
               console.log(newMaths);
               return newMaths;
             });
@@ -82,7 +93,7 @@ const Input = () => {
           onClick={() => {
             setMaths((currMaths) => {
               let newMaths = currMaths;
-              newMaths += "/6";
+              newMaths += `/(1/${VAT}+1)`;
               console.log(newMaths);
               return newMaths;
             });
@@ -104,19 +115,18 @@ const Input = () => {
           {" "}
           <p
             style={{
-              fontSize: "0.5em",
+              fontSize: "0.65em",
               textAlign: "left",
               verticalAlign: "top",
             }}
           >
-            {" "}
-            this is where the maths exp will go{" "}
+            {maths ? maths : "Your maths expression will appear here"}
           </p>{" "}
         </button>
         <button className="result">
           <p
             style={{
-              fontSize: "0.5em",
+              fontSize: "0.65em",
               textAlign: "left",
               verticalAlign: "top",
             }}
@@ -324,8 +334,24 @@ const Input = () => {
           0
         </button>
 
-        <button className="operator">+/-</button>
         <button
+          onClick={() => {
+            setMaths((currMaths) => {
+              let newMaths = currMaths;
+              newMaths += "-";
+              console.log(newMaths);
+              return newMaths;
+            });
+          }}
+          className="operator"
+        >
+          +/-
+        </button>
+        <button
+          style={{
+            fontSize: "3.65em",
+            backgroundColor: "#5bcaae",
+          }}
           onClick={() => {
             setUserInput(maths);
           }}
