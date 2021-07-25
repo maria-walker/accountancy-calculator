@@ -162,13 +162,13 @@ select {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
-  background-color: #4f518c;
+  background-color: #5bcaae;
   color: #2c2a4a;
   text-shadow: 0 0 5px white;
 }
 
 option {
-  background-color: #4f518c;
+  background-color: #5bcaae;
   color: #2c2a4a;
   text-shadow: 0 0 5px white;
   font-size: 0.8em;
@@ -191,7 +191,7 @@ summary {
   padding: 14px 17px 0 17px;
 
   width: max-content;
-  background-color: #4f518c;
+  background-color: #5bcaae;
   color: #2c2a4a;
   text-shadow: 0 0 5px white;
   border: none;
