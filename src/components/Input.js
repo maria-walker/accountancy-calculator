@@ -35,7 +35,6 @@ const Input = () => {
           </ol>
         </details>
         <select
-          style={{ color: "#bfc3ff" }}
           defaultValue="Select VAT rate"
           onChange={(event) => setVAT(event.currentTarget.value)}
         >

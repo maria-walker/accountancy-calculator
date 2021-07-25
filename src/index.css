@@ -163,12 +163,14 @@ select {
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   background-color: #4f518c;
-  color: #bfc3ff;
+  color: #2c2a4a;
+  text-shadow: 0 0 5px white;
 }
 
 option {
   background-color: #4f518c;
-  color: #bfc3ff;
+  color: #2c2a4a;
+  text-shadow: 0 0 5px white;
   font-size: 0.8em;
   width: 200px;
   height: 2em;
@@ -190,7 +192,8 @@ summary {
 
   width: max-content;
   background-color: #4f518c;
-  color: #bfc3ff;
+  color: #2c2a4a;
+  text-shadow: 0 0 5px white;
   border: none;
   box-shadow: 1px 1px 2px #bbbbbb;
   cursor: pointer;
