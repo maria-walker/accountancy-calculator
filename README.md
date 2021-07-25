@@ -1,10 +1,10 @@
 # VAT Calculator
 
-#### A fully responsive calculator app built in React.Designed to help accountancy professionals to easily calculate VAT, gross and net amount, for 3 VAT rates:
+#### fully responsive calculator app built in React. Designed to help accountancy professionals to easily calculate VAT, gross and net amounts, for three VAT rates:
 
 - 20% - Standard Rate
 - 5% - Reduced Rate (currently used for VAT supplies in hospitality sector)
-- 12.5% - Reduced Rate (wil be used for VAT supplies in hospitality sector, effective from 1 October 2021)
+- 12.5% - Reduced Rate (new reduced rate for hospitality sector, effective from 1 October 2021)
 
 ## Instructions
 
