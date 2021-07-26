@@ -14,23 +14,24 @@ const Input = () => {
           <ol>
             <li>
               Select required VAT rate from the drop-down list. If no VAT rate
-              is selected, 20% will be used by default
+              is selected, 20% will be used by default.
             </li>
             <li>
               For VAT calculations, enter the amount and click on the required
-              VAT operation, then click ={" "}
+              VAT operation, then click <strong>=</strong> .
+            </li>
+
+            <li>
+              For standard maths operations, enter a maths expression, then
+              click <strong>=</strong> .
             </li>
             <li>
-              For standard maths operations, enter maths expression, then click
-              ={" "}
-            </li>
-            <li>
-              Click AC after each completed operation, or when entered an amount
-              or a symbol by mistake{" "}
+              Click AC after each completed operation, or when entered a number
+              or a symbol by mistake.
             </li>
             <li>
               Result is rounded to 2 decimals, ready to be entered into
-              accounting system
+              accounting system.
             </li>
           </ol>
         </details>

@@ -209,6 +209,10 @@ li {
   padding: 4px;
   margin: 0;
 }
+strong {
+  font-weight: 700;
+  font-size: 1.5em;
+}
 
 /* .number {
   background: #7aca9a;
